@@ -50,5 +50,8 @@ Route::middleware('locale')->group(function () {
             Route::put('profile', 'update')->name('update');
             Route::put('profile/password', 'password')->name('password');
         });
+
+        Route::resource('categoria', CategoriaController::class);
+        Route::resource('produto', ProdutoController::class);
     });
 });
