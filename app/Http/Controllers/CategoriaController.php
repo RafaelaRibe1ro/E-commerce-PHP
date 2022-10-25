@@ -8,9 +8,6 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
-
-
-
     public function index()
     {
         $categorias = Categoria::all();
@@ -31,9 +28,9 @@ class CategoriaController extends Controller
         ];
 
         $data = $request->validate($rules);
-        $categorias = Categoria::create($data);
+        Categoria::create($data);
 
-        return redirect()->route('categoria.index')->with('success', 'Categoria cadastrada com sucesso');
+        return redirect()->route('categoria.index')->with('success', 'categoria cadastrada com sucesso');
     }
 
     public function show($id)
@@ -44,13 +41,28 @@ class CategoriaController extends Controller
 
     public function edit($id)
     {
+        $categorias = Categoria::find($id);
+        return view('categoria.crud', compact('categorias'));
     }
 
     public function update(Request $request, $id)
     {
+        $rules = [
+            'categorias' => 'required|string|max:50',
+        ];
+
+        $categorias = Categoria::find($id);
+        $data = $request->validate($rules);
+        $categorias->update($data);
+
+        return redirect()->route('categoria.index')->with('success', 'categoria atualizada com sucesso');
     }
 
     public function destroy($id)
     {
+        $categorias = Categoria::find($id);
+        $categorias->delete();
+
+        return redirect()->route('categoria.index')->with('success', 'categoria excluída com sucesso');
     }
 }
