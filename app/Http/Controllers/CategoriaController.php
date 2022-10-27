@@ -28,7 +28,7 @@ class CategoriaController extends Controller
         ];
 
         $data = $request->validate($rules);
-        Categoria::create($data);
+        $categorias = Categoria::create($data);
 
         return redirect()->route('categoria.index')->with('success', 'categoria cadastrada com sucesso');
     }
@@ -41,18 +41,17 @@ class CategoriaController extends Controller
 
     public function edit($id)
     {
-        $categorias = Categoria::find($id);
-        return view('categoria.crud', compact('categorias'));
+        $categoria = Categoria::find($id);
+        return view('categoria.crud', compact('categoria'));
     }
 
     public function update(Request $request, $id)
     {
         $rules = [
-            'categorias' => 'required|string|max:50',
+            'categoria' => 'required|string|max:50',
         ];
-
-        $categorias = Categoria::find($id);
         $data = $request->validate($rules);
+        $categorias = Categoria::find($id);
         $categorias->update($data);
 
         return redirect()->route('categoria.index')->with('success', 'categoria atualizada com sucesso');

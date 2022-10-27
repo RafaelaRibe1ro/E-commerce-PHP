@@ -24,7 +24,7 @@ class UpdateCategoriaRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            // 'categoria' => 'required|string|max:50'
         ];
     }
 }

@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProdutoController extends Controller
 {
-    // private Produto $produtos:
-
-    // public function construct(Produto $produtos)
-    // {
-    //     $this-> produto = $produtos;
-    // }
 
     public function index()
     {
@@ -33,17 +27,18 @@ class ProdutoController extends Controller
 
     public function store(Request $request)
     {
-        $rules = [
-            'nome do produto' => 'required|string|max:50',
-            'descrição' => 'required|string|max:50',
-            'preço' => 'required|integer',
+        $data = $request->validate([
+            'nome' => 'required|string|max:50',
+            'descricao' => 'required|string|max:50',
+            'preco' => 'required|integer',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
-        ];
-        $data = $request->validate($rules);
+            'imagem' => 'sometimes|file|mimes:jpg,bmp,png,webp,pdf,jpeg,svg'
+        ]);
 
-        if ($request->hasFile('imagem')) {
-            $data['foto'] = $request->file['imagem']->store('produtos', 'public');
+        if ($request->hasFile('image')) {
+            // Storage::delete('public/' . $produto->imagem);
+            $data['image'] = $request->file['image']->store('produtos', 'public');
         }
         Produto::create($data);
 
@@ -53,19 +48,43 @@ class ProdutoController extends Controller
 
     public function show($id)
     {
+        $produto = Produto::find($id);
+        $produto->load('categoria');
+        return response()->json($produto);
     }
 
 
     public function edit($id)
     {
+        $produto = Produto::find($id);
+        $categorias = Categoria::all();
+
+        return view('produto.crud', compact('produto', 'categorias'));
     }
 
 
     public function update(Request $request, $id)
     {
+        $data = $request->validate([
+            'nome' => 'required|string|max:50',
+            'descricao' => 'required|string|max:50',
+            'preco' => 'required|integer',
+            'quantidade' => 'required|integer',
+            'categoria_id' => 'required',
+            'imagem' => 'image',
+            // 'imagem' => 'image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        $produto = Produto::find($id);
+        $produto->update($data);
+        return redirect()->route('produto.index')->with('success', 'produto atualizado com sucesso');
     }
 
     public function destroy($id)
     {
+        $produto = Produto::find($id);
+        $produto->delete();
+
+        return redirect()->route('produto.index')->with('success', 'produto excluído com sucesso');
     }
 }

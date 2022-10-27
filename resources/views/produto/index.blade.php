@@ -82,7 +82,6 @@
                             color: red;
                             font-weight: bold;
                         }
-
                     </style>
                     <div class="modal-footer">
                         <form id="form-excluir" method="POST" enctype="multipart/form-data">
@@ -135,8 +134,8 @@
 
                             <div class="form-group col-md-12 col-sm-12">
                                 <h5 class="modal-title col-12 text-dark" id="serviceModalLabel">Categoria do Produto</h5>
-                                <input type="text" id="detalhes-categoria" name="detalhes-categoria" class="form-control"
-                                    readonly>
+                                <input type="text" id="detalhes-categoria" name="detalhes-categoria"
+                                    class="form-control" readonly>
                             </div>
 
                             <img id="detalhes-imagem" class="form-group col-md-6 col-sm-12" />
@@ -166,8 +165,8 @@
                 $("#detalhes-preço").val(resposta.preco);
                 $("#detalhes-descricao").val(resposta.descricao);
                 $("#detalhes-quantidade").val(resposta.quantidade);
-                $("#detalhes-categoria").val(resposta.categoria);
-                $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
+                $("#detalhes-categoria").val(resposta.categoria.categoria);
+                $("#detalhes-imagem").attr('src', '/storage/' + resposta.image);
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */

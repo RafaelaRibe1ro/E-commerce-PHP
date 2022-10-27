@@ -74,7 +74,6 @@
                             color: red;
                             font-weight: bold;
                         }
-
                     </style>
                     <div class="modal-footer">
                         <form id="form-excluir" method="POST" enctype="multipart/form-data">
