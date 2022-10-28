@@ -89,7 +89,7 @@
 <div class="row">
     <div class="col-sm-2 col-form-label">
         <label class="@if (!isset($produto)) required @endif" for="image">Imagens</label>
-        <input type="file" name="imagem" class="form-control" accept="image/*"
+        <input type="file" name="image" class="form-control" accept="image/*"
             @if (!isset($produto)) required @endif>
     </div>
 </div>

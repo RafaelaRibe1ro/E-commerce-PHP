@@ -33,12 +33,11 @@ class ProdutoController extends Controller
             'preco' => 'required|integer',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
-            'imagem' => 'sometimes|file|mimes:jpg,bmp,png,webp,pdf,jpeg,svg'
+            'imagem' => 'image'
         ]);
 
         if ($request->hasFile('image')) {
-            // Storage::delete('public/' . $produto->imagem);
-            $data['image'] = $request->file['image']->store('produtos', 'public');
+            $data['imagem'] = $request->file('image')->store('produtos', 'public');
         }
         Produto::create($data);
 
@@ -71,11 +70,16 @@ class ProdutoController extends Controller
             'preco' => 'required|integer',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
-            'imagem' => 'image',
-            // 'imagem' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'imagem' => 'image|file',
         ]);
 
         $produto = Produto::find($id);
+
+        if ($request->hasFile('image')) {
+            Storage::delete('public/' . $produto->imagem);
+            $data['imagem'] = $request->file('image')->store('produtos', 'public');
+        }
+
         $produto->update($data);
         return redirect()->route('produto.index')->with('success', 'produto atualizado com sucesso');
     }
@@ -83,6 +87,9 @@ class ProdutoController extends Controller
     public function destroy($id)
     {
         $produto = Produto::find($id);
+        if ($produto->imagem)
+            Storage::delete('public/' . $produto->imagem);
+
         $produto->delete();
 
         return redirect()->route('produto.index')->with('success', 'produto excluído com sucesso');
