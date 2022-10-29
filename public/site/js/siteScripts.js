@@ -6,10 +6,10 @@ function darkMode(event) {
   if (event.target.checked){
     document.getElementById('light-symbol').style.display = "none";
     document.getElementById('dark-symbol').style.display = "block";
-    document.body.classList('darkmode').toggle("darkmode");
+    document.body.classList.toggle("darkmode");
   } else {
     document.getElementById('light-symbol').style.display = "block";
     document.getElementById('dark-symbol').style.display = "none";
-    document.body.classList('darkmode').toggle("darkmode");
+    document.body.classList.toggle("darkmode");
   }
 }
