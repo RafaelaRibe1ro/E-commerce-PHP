@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\siteIndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\ProdutoController;
 |
 */
 
+Route::view('siteIndex', 'site.index');
 Route::middleware('locale')->group(function () {
 
     Route::put('/locale', [LocaleController::class, 'setLocale'])->name('locale');
