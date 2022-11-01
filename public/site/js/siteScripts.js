@@ -13,3 +13,13 @@ function darkMode(event) {
     document.body.classList.toggle("darkmode");
   }
 }
+
+function surchClient(name) {
+  let produtos = document.getElementsByClassName('index-produto');
+
+  for(let i = 0; i < produtos.length; i++) {
+    if (produtos[i].getAttribute("key") === name) {
+        produtos[i].style.display = "none";
+    }
+  }
+}

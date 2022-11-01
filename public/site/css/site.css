@@ -7,8 +7,14 @@
 }
 
 :root {
-  --background-header: black;
-  --text-color: white;
+  --background-header: rgb(240, 236, 228);
+  --text-color: black;
+  --footer-coracao: red;
+  --background-cards: rgb(122, 119, 119);
+  --text-cards: white;
+  --border-color: black;
+
+  background-color: var(--background-header);
 }
 
 a:visited {
@@ -29,7 +35,6 @@ a:visited {
   height: 5vh;
   background-color: var(--background-header);
   color: var(--text-color);
-
   position: sticky;
   top: 0;
   left: 0;
@@ -38,31 +43,28 @@ a:visited {
 #header-container {
   width: 100%;
   height: 100%;
-
   display: flex;
 }
 
 #header-logo {
   width: 30%;
   height: 100%;
-
   display: flex;
   align-items: center;
 }
 
 #header-logo img{
-  width: 100%;
-  height: 85%;
-
-  object-fit: scale-down;
+  width: 20%;
+  height: 120%;
+  margin-left: 40px;
   cursor: pointer;
 }
 
 #header-links {
   width: 60%;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
-
+  font-size: 110%;
+  font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -71,7 +73,6 @@ a:visited {
 #header-darkmode {
   width: 10%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,11 +85,124 @@ a:visited {
 .label-darkmode {
   display: flex;
   align-items: center;
-
   cursor: pointer;
 }
 
 .darkmode {
-  --background-header: white;
-  --text-color: black;
+  --background-header: black;
+  --text-color: rgb(187, 178, 178);
+  --background-cards: rgb(187, 178, 178);
+  --text-cards: black;
+  background-color: var(--background-header);
+}
+
+#sobrenos {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+}
+
+.site-footer {
+  width: 100vw;
+  height: 50px;
+  background-color: var(--background-header);
+  display: flex;
+  position:static;
+  bottom: 0;
+}
+
+.site-footer, .container-icons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center ;
+}
+
+.container-icons{
+  display: flex;
+  justify-content:center;
+  gap: 50px;
+}
+
+.footer-text{
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.footer-text > span{
+  color: var(--footer-coracao);
+}
+
+#index-card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.index-produto {
+  width: 19%;
+  height: 40vh;
+  background-color: var(--background-cards);
+  color: var(--text-cards);
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin-bottom: 1%;
+}
+
+.index-produto img{
+  width: 50%;
+  height: 20vh;
+  border: 0.5px solid var(--border-color);
+  border-radius: 5px;
+}
+
+@media (max-width: 410px) {
+  #header-container {
+    font-size: 90%;
+  }
+
+  .footer-text {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 340px) {
+  #header-container {
+    font-size: 80%;
+  }
+
+  #light-symbol,
+  #dark-symbol {
+    font-size: 120%;
+  }
+
+  .footer-text {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 310px) {
+  #header-container {
+    font-size: 70%;
+  }
+
+  #light-symbol
+  #dark-symbol {
+    font-size: 120%;
+  }
+
+  .footer-text {
+    font-size: 70%;
+  }
 }
