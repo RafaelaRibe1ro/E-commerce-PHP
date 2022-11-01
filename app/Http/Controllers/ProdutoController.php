@@ -29,8 +29,8 @@ class ProdutoController extends Controller
     {
         $data = $request->validate([
             'nome' => 'required|string|max:50',
-            'descricao' => 'required|string|max:50',
-            'preco' => 'required|integer',
+            'descricao' => 'required|string|max:70',
+            'preco' => 'required|string|max:15',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
             'imagem' => 'image'
@@ -66,8 +66,8 @@ class ProdutoController extends Controller
     {
         $data = $request->validate([
             'nome' => 'required|string|max:50',
-            'descricao' => 'required|string|max:50',
-            'preco' => 'required|integer',
+            'descricao' => 'required|string|max:70',
+            'preco' => 'required|string',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
             'imagem' => 'image|file',

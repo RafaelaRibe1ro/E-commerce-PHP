@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProdutoController;
+use App\Models\Produto;
 
 class siteIndexController extends Controller
 {
@@ -13,20 +15,9 @@ class siteIndexController extends Controller
      */
     public function index()
     {
-        $clientes = [
-            ['nome' => 'Teste 1', 'idade' => '1'],
-            ['nome' => 'Teste 2', 'idade' => '2'],
-            ['nome' => 'Teste 3', 'idade' => '3'],
-            ['nome' => 'Teste 4', 'idade' => '4'],
-            ['nome' => 'Teste 5', 'idade' => '5'],
-            ['nome' => 'Teste 6', 'idade' => '6'],
-            ['nome' => 'Teste 7', 'idade' => '7'],
-            ['nome' => 'Teste 8', 'idade' => '8'],
-            ['nome' => 'Teste 9', 'idade' => '9'],
-            ['nome' => 'Teste 10', 'idade' => '10'],
-        ];
+        $produtos = Produto::all();
 
-        return view('site.index', compact('clientes'));
+        return view('site.index', compact('produtos'));
     }
 
     /**
