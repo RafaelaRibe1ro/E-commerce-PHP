@@ -2,12 +2,12 @@
     <div id="header-container">
         <div id="header-logo">
             <img src="{{ asset('site/img/imgLogo1.jpg') }}" alt="Logo da Red Gamer"
-                onclick="openPage('https://www.google.com.br/')">
+                onclick="openPage('https://redcanids.com.br/')">
         </div>
 
         <div id="header-links">
             <a href="#sobrenos">Sobre nós</a>
-            <a href="#footer">Footer</a>
+            <a href="#contato">Contato</a>
             <a href="{{ route('dashboard') }}">Admin</a>
         </div>
 

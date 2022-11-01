@@ -14,7 +14,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Poppins:wght@700&display=swap"
         rel="stylesheet">
 
 </head>
@@ -24,9 +24,9 @@
 
     @yield('conteudo')
 
-    {{-- @include('footer') --}}
-
     <script src="{{ asset('site/js/siteScripts.js') }}"></script>
+
+    @include('layouts.site.footer')
 </body>
 
 </html>
