@@ -21,7 +21,7 @@ use App\Http\Controllers\siteIndexController;
 |
 */
 
-Route::view('siteIndex', 'site.index');
+Route::get('/siteIndex', [siteIndexController::class, 'index'])->name('site.index');
 Route::middleware('locale')->group(function () {
 
     Route::put('/locale', [LocaleController::class, 'setLocale'])->name('locale');
