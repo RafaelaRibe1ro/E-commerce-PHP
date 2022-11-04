@@ -4,16 +4,18 @@
   text-decoration: none;
   box-sizing: border-box;
   outline: none !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
-  --background-header: rgb(240, 236, 228);
+  --background-header: rgb(189, 184, 184);
   --text-color: black;
-  --footer-coracao: red;
-  --background-cards: rgb(122, 119, 119);
-  --text-cards: white;
-  --border-color: black;
-
+  --footer-coracao: rgb(124, 0, 0);
+  --background-titulo: rgb(187, 178, 178);
+  --background-cards: rgb(161, 144, 144);
+  --text-cards: rgb(0, 0, 0);
+  --color-icons: rgb(0, 0, 0);
+  --text-shadow: black;
   background-color: var(--background-header);
 }
 
@@ -21,6 +23,14 @@ a:visited {
   color: inherit;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #dee0e2;
+}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -30,6 +40,25 @@ a:visited {
   'opsz' 48,
 }
 
+/* BANNER */
+.titulo {
+  width: 100%;
+  height: 100%;
+  background: url('../img/produtos.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.titulo p {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 6px white;
+  text-align: center;
+  margin-top: 500px;
+}
+
+/* HEADER */
 #site-header {
   width: 100%;
   height: 5vh;
@@ -54,8 +83,8 @@ a:visited {
 }
 
 #header-logo img{
-  width: 20%;
-  height: 120%;
+  width: 10%;
+  height: 90%;
   margin-left: 40px;
   cursor: pointer;
 }
@@ -64,12 +93,13 @@ a:visited {
   width: 60%;
   height: 100%;
   font-size: 110%;
-  font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-shadow: 1px 1px 6px var(--text-color);
 }
 
+/* DARK-MODE */
 #header-darkmode {
   width: 10%;
   height: 100%;
@@ -83,6 +113,7 @@ a:visited {
 }
 
 .label-darkmode {
+  color: var(--text-color);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -91,21 +122,57 @@ a:visited {
 .darkmode {
   --background-header: black;
   --text-color: rgb(187, 178, 178);
-  --background-cards: rgb(187, 178, 178);
+  --background-cards: #c2bebe;
+  --background-titulo: rgb(41, 40, 40);
   --text-cards: black;
-  background-color: var(--background-header);
+  --color-icons: white;
+  --text-shadow: 1px 1px 6px red;
+  background-color: black;
 }
 
+/* SOBRENOS */
 #sobrenos {
+  width: 40%;
+  height: 50vh;
+  font-size: 200%;
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.titulo2 {
   width: 100%;
-  height: 40vh;
+  height: 50%;
+  background: url('../img/img.jpeg') no-repeat center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  font-size: 200%;
+  text-align: center;
 }
 
+.titulo2 p {
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 3px 3px 6px black;
+}
+
+#sobrenos h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 3px 3px 6px black;
+  font-weight: 400;
+  margin-top: 100px;
+}
+
+/* FOOTER */
 .site-footer {
   width: 100vw;
   height: 50px;
@@ -122,6 +189,7 @@ a:visited {
 }
 
 .container-icons{
+  color: var(--color-icons);
   display: flex;
   justify-content:center;
   gap: 50px;
@@ -130,14 +198,14 @@ a:visited {
 .footer-text{
   color: var(--text-color);
   font-size: 15px;
-  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .footer-text > span{
   color: var(--footer-coracao);
 }
 
-#index-card-section {
+/* SEÇÃO DE PRODUTOS */
+#index-card-section-cadeiras {
   width: 100%;
   height: auto;
   display: flex;
@@ -145,19 +213,50 @@ a:visited {
   flex-wrap: wrap;
 }
 
+#index-card-section-mouse {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#index-card-section-teclado {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#cadeiras, #mouse, #teclado {
+  font-size: 40px;
+  color: var(--text-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px var(--text-color);
+  margin-top: 20px;
+}
+
 .index-produto {
   width: 19%;
-  height: 40vh;
+  height: 42vh;
   background-color: var(--background-cards);
   color: var(--text-cards);
   font-size: larger;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  font-weight: bolder;
+  display: grid;
+  justify-items: center;
+  text-align: center;
   align-items: center;
-  border: 1px solid var(--border-color);
+  border: 3px;
   border-radius: 10px;
   margin-bottom: 1%;
+  padding: 8px;
+}
+
+#preco, #preco2, #preco3 {
+  font-weight: bolder;
 }
 
 .index-produto img{
@@ -167,6 +266,12 @@ a:visited {
   border-radius: 5px;
 }
 
+.btn-danger{
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 410px) {
   #header-container {
     font-size: 90%;
@@ -177,18 +282,164 @@ a:visited {
   }
 }
 
+/* IPHONE4 */
 @media (max-width: 340px) {
+  #site-header {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  #modal-detalhes {
+    width: 100%;
+    height: 80%;
+  }
+
+  .titulo {
+    width:100%;
+    height: 150%;
+  }
+
+  .titulo p {
+    font-size: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 1px 6px white;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+
   #header-container {
-    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header-links {
+    width: 100%;
+    font-size: 57%;
+  }
+
+  #header-logo img{
+    width: 30%;
+    margin-left: 37px;
+    cursor: pointer;
   }
 
   #light-symbol,
   #dark-symbol {
-    font-size: 120%;
+    font-size: 100%;
+  }
+
+  #index-card-section-cadeiras {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #index-card-section-mouse {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #index-card-section-teclado {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #cadeiras, #mouse, #teclado {
+    font-size: 10px;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px var(--text-color);
+    margin-top: 20px;
+  }
+
+  .index-produto {
+    width: 60%;
+    height: 72vh;
+    background-color: var(--background-cards);
+    color: var(--text-cards);
+    font-size: smaller;
+    font-weight: bolder;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border: 3px;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    padding: 8px;
+  }
+
+  #sobrenos {
+    width: 60%;
+    height: 30vh;
+    color: var(--text-color);
+  }
+
+  .titulo2 {
+    width: 100%;
+    height: 100%;
+    background: url('../img/img.jpeg') no-repeat center;
+    background-size: cover;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo2 p {
+    font-size: 5px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+    text-shadow: 3px 3px 6px black;
+  }
+
+  #sobrenos h3 {
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 3px 3px 6px black;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+
+  .site-footer {
+    width: 100vw;
+    height: 45px;
   }
 
   .footer-text {
-    font-size: 80%;
+    font-size: 60%;
+    margin-top: 12px;
+  }
+
+  .container-icons{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
   }
 }
 
