@@ -263,11 +263,6 @@
 
 
 @section('produtos')
-    @if ($produto->quantidade >= 1)
-        <div id="produtos">
-            <h3>Headset Gamer<h3>
-        </div>
-    @endif
 
     <section id="index-card-section-produtos">
         @if (isset($produtos))
