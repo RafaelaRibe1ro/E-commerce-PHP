@@ -267,11 +267,6 @@
         <div id="produtos">
             <h3>Headset Gamer<h3>
         </div>
-    @else
-        <div id="produtos">
-            <h3>Headset Gamer<h3>
-                    <p>SEM ESTOQUE</p>
-        </div>
     @endif
 
     <section id="index-card-section-produtos">
