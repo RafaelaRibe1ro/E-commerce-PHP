@@ -229,13 +229,25 @@ body{
   flex-wrap: wrap;
 }
 
-#cadeiras, #mouse, #teclado {
-  font-size: 40px;
+#index-card-section-produtos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#cadeiras, #mouse, #teclado, #produtos {
+  font-size: 15px;
   color: var(--text-color);
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 3px 3px 6px var(--text-color);
   margin-top: 20px;
+}
+
+#produtos {
+  min-height: 25vh;
 }
 
 .index-produto {
@@ -362,8 +374,8 @@ body{
     align-items: center;
   }
 
-  #cadeiras, #mouse, #teclado {
-    font-size: 10px;
+  #cadeiras, #mouse, #teclado #produtos {
+    font-size: 20px;
     color: var(--text-color);
     font-weight: bold;
     text-transform: uppercase;
