@@ -50,7 +50,7 @@
 <div class="row">
     <label class="col-sm-2 col-form-label">{{ __('Quantidade do Produto') }}</label>
     <div>
-        <input type="number" id="quantidade" name="quantidade" min="1" max="500"
+        <input type="number" id="quantidade" name="quantidade" min="0" max="500"
             value="{{ isset($produto) ? $produto->quantidade : old('quantidade') }}"
             class="form-control @error('quantidade') is-invalid @enderror" required>
         @error('quantidade')

@@ -1,13 +1,16 @@
 <header id="site-header">
     <div id="header-container">
         <div id="header-logo">
-            <img src="{{ asset('site/img/imgLogo1.jpg') }}" alt="Logo da Red Gamer"
+            <img src="{{ asset('site/img/imglogo1.jpg') }}" alt="Logo da Red Gamer"
                 onclick="openPage('https://redcanids.com.br/')">
         </div>
 
         <div id="header-links">
+            <a href="#titulo">Home</a>
             <a href="#sobrenos">Sobre nós</a>
-            <a href="#contato">Contato</a>
+            <a href="#cadeiras">Cadeira Gamer</a>
+            <a href="#mouse">Mouse Gamer</a>
+            <a href="#teclado">Teclado Gamer</a>
             <a href="{{ route('dashboard') }}">Admin</a>
         </div>
 
