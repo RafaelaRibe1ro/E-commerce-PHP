@@ -21,7 +21,7 @@ class ProdutoFactory extends Factory
             'descricao' => $this->faker->realText(50),
             'imagem' => $this->faker->imageUrl(),
             'preco' => $this->faker->numberBetween(1, 5000),
-            'quantidade' => $this->faker->numberBetween(1, 50),
+            'quantidade' => $this->faker->numberBetween(0, 50),
         ];
     }
 }
