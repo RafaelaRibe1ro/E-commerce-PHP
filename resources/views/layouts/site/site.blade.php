@@ -32,6 +32,8 @@
 
     @yield('produtos-teclado')
 
+    @yield('produtos')
+
     @yield('sobrenos')
 
     <script src="{{ asset('site/js/siteScripts.js') }}"></script>
