@@ -372,7 +372,7 @@ body{
   }
 
   .index-produto {
-    width: 60%;
+    width: 70%;
     height: 72vh;
     background-color: var(--background-cards);
     color: var(--text-cards);
