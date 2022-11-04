@@ -30,7 +30,7 @@ class ProdutoController extends Controller
         $data = $request->validate([
             'nome' => 'required|string|max:50',
             'descricao' => 'required|string|max:70',
-            'preco' => 'required|string|max:15',
+            'preco' => 'required|string',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
             'imagem' => 'image'
@@ -52,7 +52,6 @@ class ProdutoController extends Controller
         return response()->json($produto);
     }
 
-
     public function edit($id)
     {
         $produto = Produto::find($id);
@@ -67,7 +66,7 @@ class ProdutoController extends Controller
         $data = $request->validate([
             'nome' => 'required|string|max:50',
             'descricao' => 'required|string|max:70',
-            'preco' => 'required|string',
+            'preco' => 'required|string|max:15',
             'quantidade' => 'required|integer',
             'categoria_id' => 'required',
             'imagem' => 'image|file',
