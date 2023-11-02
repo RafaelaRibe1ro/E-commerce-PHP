@@ -1,8 +1,7 @@
 <header id="site-header">
     <div id="header-container">
         <div id="header-logo">
-            <img src="{{ asset('site/img/imglogo1.jpg') }}" alt="Logo da Red Gamer"
-                onclick="openPage('https://redcanids.com.br/')">
+            <img src="{{ asset('site/img/imglogo1.jpg') }}" alt="Logo da Red Gamer">
         </div>
 
         <div id="header-links">
