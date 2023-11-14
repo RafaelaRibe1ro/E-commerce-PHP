@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RED GAMER</title>
 
-    {{-- <link href="{{ asset('material') }}/css/site.css" rel="stylesheet" /> --}}
     <link href="{{ asset('material') }}/css/material-dashboard.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{ asset('site/css/site.css') }}">
@@ -17,7 +16,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
