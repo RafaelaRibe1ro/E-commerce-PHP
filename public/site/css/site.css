@@ -4,7 +4,7 @@
     text-decoration: none;
     box-sizing: border-box;
     outline: none !important;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -196,6 +196,9 @@ a {
 .footer-text {
     color: var(--text-color);
     font-size: 15px;
+    font-family: "Roboto";
+    font-weight: 300;
+    margin-top: 12px;
 }
 
 .footer-text > span {
@@ -235,21 +238,18 @@ a {
     flex-wrap: wrap;
 }
 
-#cadeiras,
-#mouse,
-#teclado,
-#produtos {
-    font-size: 15px;
+h3 {
+    font-weight: 500;
+    font-size: 50px;
     color: var(--text-color);
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 6px var(--text-color);
+    text-shadow: 2px 2px 5px var(--text-color);
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .index-produto {
     width: 19%;
-    height: 42vh;
+    height: 50vh;
     background-color: var(--background-cards);
     color: var(--text-cards);
     font-size: larger;
