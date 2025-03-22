@@ -1,5 +1,5 @@
 <footer class="site-footer">
-    <p class="footer-text">Desenvolvido com <span>♥</span> por Rafaela Oliveira Ribeiro.</p>
+    <p class="footer-text">Desenvolvido com <span>♥</span> por Alunos PUC - Minas</p>
     <div class="container-icons">
         <a target="_blank" href="https://www.facebook.com/rafinha.abaete/?locale=pt_BR" class="social-icons"><i
                 class="fab fa-facebook"></i></a>

@@ -1,15 +1,15 @@
 <header id="site-header">
     <div id="header-container">
         <div id="header-logo">
-            <img src="{{ asset('site/img/imglogo1.jpg') }}" alt="Logo da Red Gamer">
+            <img src="{{ asset('site/img/sobreNos.png') }}" alt="Logo da Quel Caramel">
         </div>
 
         <div id="header-links">
             <a href="#titulo">Home</a>
             <a href="#sobrenos">Sobre nós</a>
-            <a href="#cadeiras">Cadeira Gamer</a>
-            <a href="#mouse">Mouse Gamer</a>
-            <a href="#teclado">Teclado Gamer</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#maisVendidos">Mais Vendidos</a>
+            <a href="#promocao">Promoção</a>
             <a href="{{ route('dashboard') }}">Admin</a>
         </div>
 

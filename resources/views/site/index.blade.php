@@ -5,7 +5,7 @@
     </div>
     <section class="titulo">
         <div class="titulo-container">
-            <p>Aqui você encontra as melhores opções para seu setup gamer.</p>
+            <p>Aqui você encontra as melhores opções de doces goumert!</p>
     </section>
 @endsection
 
@@ -13,20 +13,19 @@
     <section class="titulo2">
         <div id="sobrenos">
             <h3>Sobre Nós</h3>
-            <p>A Red Gamer nasceu em 2022 com o objetivo de atender às
+            <p>QuelCaramel nasceu em 2022 com o objetivo de atender às
                 necessidade de seus mais diversos clientes,
                 priorizando a qualidade e diversidade dos produtos, o prazo de entrega, e assim, a satisfação destes.
-                Somos uma empresa de tecnologia que oferta produtos direcionados ao público gamer, garantindo que
-                seus clientes possam viver experiências incríveis de uma forma mais segura, confortável e inovadora.</p>
+                Oferecemos doces deliciosos e com o melhor custo benefício de Belo Horizonte e região.</p>
         </div>
     </section>
 @endsection
 
-@section('produtos-cadeiras')
-    <div id="cadeiras">
-        <h3>Cadeira Gamer<h3>
+@section('produtos-novidades')
+    <div id="novidades">
+        <h3>Novidades<h3>
     </div>
-    <section id="index-card-section-cadeiras">
+    <section id="index-card-section-novidades">
         @if (isset($produtos))
             @foreach ($produtos as $produto)
                 @if ($produto->categoria_id == 3)
@@ -101,11 +100,11 @@
     </div>
 @endsection
 
-@section('produtos-teclado')
-    <div id="teclado">
-        <h3>Teclado Gamer<h3>
+@section('produtos-promoção')
+    <div id="promocao">
+        <h3>Promoção<h3>
     </div>
-    <section id="index-card-section-teclado">
+    <section id="index-card-section-promocao">
         @if (isset($produtos))
             @foreach ($produtos as $produto)
                 @if ($produto->categoria_id == 2)
@@ -181,11 +180,11 @@
     </div>
 @endsection
 
-@section('produtos-mouse')
-    <div id="mouse">
-        <h3>Mouse Gamer<h3>
+@section('produtos-mais-vendidos')
+    <div id="maisVendidos">
+        <h3>Mais Vendidos<h3>
     </div>
-    <section id="index-card-section-mouse">
+    <section id="index-card-section-maisVendidos">
         @if (isset($produtos))
             @foreach ($produtos as $produto)
                 @if ($produto->categoria_id == 1)

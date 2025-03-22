@@ -8,7 +8,7 @@
 }
 
 :root {
-    --background-header: rgb(189, 184, 184);
+    --background-header: #fff9f0;
     --text-color: black;
     --footer-coracao: rgb(124, 0, 0);
     --background-titulo: rgb(187, 178, 178);
@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #dee0e2;
+    background-color: var(--background-header)
 }
 
 .material-symbols-outlined {
@@ -40,7 +40,7 @@ body {
 .titulo {
     width: 100%;
     height: 100%;
-    background: url("../img/produtos.jpg") no-repeat center;
+    background: url("../img/capaQR.png") no-repeat center;
     background-size: cover;
 }
 
@@ -139,7 +139,7 @@ a {
 .titulo2 {
     width: 100%;
     height: 50%;
-    background: url("../img/img.jpeg") no-repeat center;
+    background: url("../img/sobreNos.png") no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -206,7 +206,7 @@ a {
 }
 
 /* SEÇÃO DE PRODUTOS */
-#index-card-section-cadeiras {
+#index-card-section-novidades {
     width: 100%;
     height: auto;
     display: flex;
@@ -214,7 +214,7 @@ a {
     flex-wrap: wrap;
 }
 
-#index-card-section-mouse {
+#index-card-section-maisVendidos {
     width: 100%;
     height: auto;
     display: flex;
@@ -222,7 +222,7 @@ a {
     flex-wrap: wrap;
 }
 
-#index-card-section-teclado {
+#index-card-section-promocao {
     width: 100%;
     height: auto;
     display: flex;
@@ -250,7 +250,7 @@ h3 {
 .index-produto {
     width: 19%;
     height: 50vh;
-    background-color: var(--background-cards);
+    background-color: #7b5113;
     color: var(--text-cards);
     font-size: larger;
     font-weight: bolder;
@@ -280,6 +280,13 @@ h3 {
 .btn-danger {
     padding: 8px;
     cursor: pointer;
+    background-color: #957951;
+    border-color: #957951;
+}
+
+.btn-danger:hover {
+    background-color: #f1c380;
+    border-color: #f1c380;
 }
 
 /* RESPONSIVIDADE */
@@ -345,7 +352,7 @@ h3 {
         font-size: 100%;
     }
 
-    #index-card-section-cadeiras {
+    #index-card-section-novidades {
         width: 100%;
         height: auto;
         display: flex;
@@ -354,7 +361,7 @@ h3 {
         align-items: center;
     }
 
-    #index-card-section-mouse {
+    #index-card-section-maisVendidos {
         width: 100%;
         height: auto;
         display: flex;
@@ -363,7 +370,7 @@ h3 {
         align-items: center;
     }
 
-    #index-card-section-teclado {
+    #index-card-section-promocao {
         width: 100%;
         height: auto;
         display: flex;
@@ -372,9 +379,9 @@ h3 {
         align-items: center;
     }
 
-    #cadeiras,
-    #mouse,
-    #teclado #produtos {
+    #novidades,
+    #maisVendidos,
+    #promocao #produtos {
         font-size: 20px;
         color: var(--text-color);
         font-weight: bold;
@@ -409,7 +416,7 @@ h3 {
     .titulo2 {
         width: 100%;
         height: 100%;
-        background: url("../img/img.jpeg") no-repeat center;
+        background: url("../img/sobreNos.png") no-repeat center;
         background-size: cover;
         justify-content: center;
         align-items: center;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RED GAMER</title>
+    <title>Quel Caramel</title>
 
     <link href="{{ asset('material') }}/css/material-dashboard.css" rel="stylesheet" />
 
@@ -27,11 +27,11 @@
 
     @yield('titulo')
 
-    @yield('produtos-cadeiras')
+    @yield('produtos-novidades')
 
-    @yield('produtos-mouse')
+    @yield('produtos-mais-vendidos')
 
-    @yield('produtos-teclado')
+    @yield('produtos-promoção')
 
     @yield('produtos')
 
