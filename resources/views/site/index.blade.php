@@ -13,7 +13,7 @@
     <section class="titulo2">
         <div id="sobrenos">
             <h3>Sobre Nós</h3>
-            <p>QuelCaramel nasceu em 2022 com o objetivo de atender às
+            <p>QuelCaramel se iniciou em 2022 com o objetivo de atender às
                 necessidade de seus mais diversos clientes,
                 priorizando a qualidade e diversidade dos produtos, o prazo de entrega, e assim, a satisfação destes.
                 Oferecemos doces deliciosos e com o melhor custo benefício de Belo Horizonte e região.</p>
